@@ -7,6 +7,10 @@ TagManager:
   - PlayerAmmo
   - Enemy
   - Global
+  - ammo
+  - 1stEnemy
+  - flyingEnemy
+  - Wall
   layers:
   - Default
   - TransparentFX

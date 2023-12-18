@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Client.Object.Interface;
 using UnityEngine;
 
@@ -27,12 +28,12 @@ namespace Client.Object
             var temp = _rb.velocity;
             temp.y = 10;
             _rb.velocity = temp;
-            StartCoroutine(AmmoShot(gameObject));
+            //StartCoroutine(AmmoShot(gameObject));
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if(other.CompareTag("Enemy")) Main.PlayerAmmoPool.Release(gameObject);
+            if(other.CompareTag("Enemy")||other.CompareTag("Wall")) Main.PlayerAmmoPool.Release(gameObject);
         }
     }
 }

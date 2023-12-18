@@ -4,9 +4,9 @@ namespace Server.Factory
 {
     public class EnemyFactory : MonoBehaviour
     {
-        public static GameObject Create(GameObject enemy,GameObject parent)
+        public static GameObject Create(GameObject enemy)
         {
-            return Instantiate(enemy, parent.transform);
+            return Instantiate(enemy);
         }
     }
 }
